@@ -1,0 +1,30 @@
+{
+  "name": "weather-widget",
+  "version": "1.0.0",
+  "description": "Weather forecast web widget based on The Odin Project",
+  "main": "index.js",
+  "scripts": {
+    "dev": "webpack --mode=development",
+    "watch": "webpack --mode=development --watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Naithcots/weather-widget.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Naithcots/weather-widget/issues"
+  },
+  "homepage": "https://github.com/Naithcots/weather-widget#readme",
+  "devDependencies": {
+    "css-loader": "^6.7.1",
+    "style-loader": "^3.3.1",
+    "webpack": "^5.73.0",
+    "webpack-cli": "^4.10.0"
+  },
+  "dependencies": {
+    "axios": "^0.27.2"
+  }
+}
