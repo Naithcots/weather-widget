@@ -40,7 +40,6 @@ svg {
 .weather__header__city {
   margin: 0 auto;
   margin-bottom: 0.25em;
-  width: 85%;
 
   font-size: calc(100% + 1.75vw);
   font-weight: 300;

@@ -1,5 +1,11 @@
 import "./style.css";
-const { default: axios } = require("axios");
+import axios from "axios";
+import Weather from "./weather";
+import Forecast from "./forecast";
+const form = document.querySelector("#searchCityForm");
+
+const weather = new Weather();
+const forecast = new Forecast();
 
 const publicApiKey = "ed6024d82facfcd9aea93f3226a43f09";
 // const cityName = "Tychy";
@@ -21,6 +27,36 @@ const getWeatherDataByCity = async (cityName) => {
   };
 };
 
-// getWeatherDataByCity("Tychy")
-//   .then((data) => console.log(data))
-//   .catch((err) => console.log(err));
+const initializeApp = () => {
+  const defaultCity = "Warsaw";
+
+  getWeatherDataByCity(defaultCity)
+    .then((data) => {
+      console.log(data);
+      weather.setWeatherData(data);
+      weather.render();
+
+      forecast.setForecastData(data.forecast.list);
+      forecast.render();
+    })
+    .catch((err) => console.log(err));
+
+  form.addEventListener("submit", (e) => {
+    const city = e.target.city.value;
+
+    getWeatherDataByCity(city)
+      .then((data) => {
+        console.log(data);
+        weather.setWeatherData(data);
+        weather.render();
+
+        forecast.setForecastData(data.forecast.list);
+        forecast.render();
+      })
+      .catch((err) => console.log(err));
+
+    e.preventDefault();
+  });
+};
+
+initializeApp();
