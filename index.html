@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script
+      src="https://kit.fontawesome.com/141278ab01.js"
+      crossorigin="anonymous"
+    ></script>
+    <title>Weather Widget</title>
+  </head>
+  <body>
+    <div id="form">
+      <form id="searchCityForm" class="form__city">
+        <input type="text" class="form__input" id="city" placeholder=" " />
+        <label for="city" class="form__label">City</label>
+        <!-- <button>Change location</button> -->
+      </form>
+    </div>
+    <div id="weather">
+      <!-- <div class="weather__left">
+        <div class="weather__header">
+          <h1 class="weather__header__city">Tychy</h1>
+          <span class="weather__header__population">Population: 130000</span>
+        </div>
+
+        <div class="weather__wind">
+          <p class="weather__wind__speed">
+            <i class="fa-solid fa-wind"></i>6.72km/h
+          </p>
+          <span class="weather__wind__direction">West(268°)</span>
+        </div>
+
+        <div class="weather__rain">
+          <p class="weather__rain__item">
+            <i class="fa-solid fa-droplet"></i>Last 1h: 1.78mm
+          </p>
+          <p class="weather__rain__item">
+            <i class="fa-solid fa-droplet"></i>Last 3h: 0mm
+          </p>
+        </div>
+      </div>
+
+      <div class="weather__center">
+        <img
+          src="http://openweathermap.org/img/wn/10d@4x.png"
+          alt="weather icon"
+        />
+        <h1 class="weather__condition">Light rain</h1>
+
+        <div class="weather__temperature">
+          <h2 class="weather__temperature__now">30°C</h2>
+          <span class="weather__temperature__feel">Feels like 29.7°C</span>
+        </div>
+      </div>
+
+      <div class="weather__right">
+        <div class="weather__misc">
+          <div class="weather__misc__main">
+            <p class="weather__misc__clouds">
+              <i class="fa-solid fa-cloud"></i>38%
+            </p>
+            <p class="weather__misc__pressure">Pressure: 1009hPa</p>
+            <p class="weather__misc__humidity">Humidity: 43%</p>
+          </div>
+          <div class="weather__misc__sun">
+            <p class="weather__misc__sunrise">
+              <i class="fa-solid fa-sun"></i>
+              <i class="fa-solid fa-angle-up"></i>6:43
+            </p>
+            <p class="weather__misc__sunset">
+              <i class="fa-solid fa-sun"></i>
+              <i class="fa-solid fa-angle-down"></i>21:28
+            </p>
+          </div>
+        </div>
+      </div> -->
+    </div>
+    <div id="forecast">
+      <!-- <div class="forecast__box">
+        <img
+          src="http://openweathermap.org/img/wn/10d@4x.png"
+          alt="forecast icon"
+        />
+        <p class="forecast__box__time">20.06.2020 16:00</p>
+        <h3 class="forecast__box__condition">Light rain</h3>
+        <h2 class="forecast__box__temperature">28.2°C</h2>
+        <div class="forecast__wind">
+          <p class="forecast__wind__speed">
+            <i class="fa-solid fa-wind"></i>6.72km/h
+          </p>
+          <span class="forecast__wind__direction">West(268°)</span>
+        </div>
+        <p class="forecast__box__clouds">
+          <i class="fa-solid fa-cloud"></i>45%
+        </p>
+      </div>
+      <div class="forecast__box">
+        <img
+          src="http://openweathermap.org/img/wn/10d@4x.png"
+          alt="forecast icon"
+        />
+        <p class="forecast__box__time">20.06.2020 16:00</p>
+        <h3 class="forecast__box__condition">Light rain</h3>
+        <h2 class="forecast__box__temperature">28.2°C</h2>
+        <div class="forecast__wind">
+          <p class="forecast__wind__speed">
+            <i class="fa-solid fa-wind"></i>6.72km/h
+          </p>
+          <span class="forecast__wind__direction">West(268°)</span>
+        </div>
+        <p class="forecast__box__clouds">
+          <i class="fa-solid fa-cloud"></i>45%
+        </p>
+      </div>
+      <div class="forecast__box">
+        <img
+          src="http://openweathermap.org/img/wn/10d@4x.png"
+          alt="forecast icon"
+        />
+        <p class="forecast__box__time">20.06.2020 16:00</p>
+        <h3 class="forecast__box__condition">Light rain</h3>
+        <h2 class="forecast__box__temperature">28.2°C</h2>
+        <div class="forecast__wind">
+          <p class="forecast__wind__speed">
+            <i class="fa-solid fa-wind"></i>6.72km/h
+          </p>
+          <span class="forecast__wind__direction">West(268°)</span>
+        </div>
+        <p class="forecast__box__clouds">
+          <i class="fa-solid fa-cloud"></i>45%
+        </p>
+      </div>
+      <div class="forecast__box">
+        <img
+          src="http://openweathermap.org/img/wn/10d@4x.png"
+          alt="forecast icon"
+        />
+        <p class="forecast__box__time">20.06.2020 16:00</p>
+        <h3 class="forecast__box__condition">Light rain</h3>
+        <h2 class="forecast__box__temperature">28.2°C</h2>
+        <div class="forecast__wind">
+          <p class="forecast__wind__speed">
+            <i class="fa-solid fa-wind"></i>6.72km/h
+          </p>
+          <span class="forecast__wind__direction">West(268°)</span>
+        </div>
+        <p class="forecast__box__clouds">
+          <i class="fa-solid fa-cloud"></i>45%
+        </p>
+      </div>
+      <div class="forecast__box">
+        <img
+          src="http://openweathermap.org/img/wn/10d@4x.png"
+          alt="forecast icon"
+        />
+        <p class="forecast__box__time">20.06.2020 16:00</p>
+        <h3 class="forecast__box__condition">Light rain</h3>
+        <h2 class="forecast__box__temperature">28.2°C</h2>
+        <div class="forecast__wind">
+          <p class="forecast__wind__speed">
+            <i class="fa-solid fa-wind"></i>6.72km/h
+          </p>
+          <span class="forecast__wind__direction">West(268°)</span>
+        </div>
+        <p class="forecast__box__clouds">
+          <i class="fa-solid fa-cloud"></i>45%
+        </p>
+      </div>
+      <div class="forecast__box">
+        <img
+          src="http://openweathermap.org/img/wn/10d@4x.png"
+          alt="forecast icon"
+        />
+        <p class="forecast__box__time">20.06.2020 16:00</p>
+        <h3 class="forecast__box__condition">Light rain</h3>
+        <h2 class="forecast__box__temperature">28.2°C</h2>
+        <div class="forecast__wind">
+          <p class="forecast__wind__speed">
+            <i class="fa-solid fa-wind"></i>6.72km/h
+          </p>
+          <span class="forecast__wind__direction">West(268°)</span>
+        </div>
+        <p class="forecast__box__clouds">
+          <i class="fa-solid fa-cloud"></i>45%
+        </p>
+      </div>
+      <div class="forecast__box">
+        <img
+          src="http://openweathermap.org/img/wn/10d@4x.png"
+          alt="forecast icon"
+        />
+        <p class="forecast__box__time">20.06.2020 16:00</p>
+        <h3 class="forecast__box__condition">Light rain</h3>
+        <h2 class="forecast__box__temperature">28.2°C</h2>
+        <div class="forecast__wind">
+          <p class="forecast__wind__speed">
+            <i class="fa-solid fa-wind"></i>6.72km/h
+          </p>
+          <span class="forecast__wind__direction">West(268°)</span>
+        </div>
+        <p class="forecast__box__clouds">
+          <i class="fa-solid fa-cloud"></i>45%
+        </p>
+      </div> -->
+    </div>
+    <div class="spinner">
+      <i class="fa-solid fa-circle-notch spinner__image"></i>
+    </div>
+    <script src="main.js"></script>
+  </body>
+</html>
