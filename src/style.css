@@ -3,7 +3,7 @@
 }
 
 body {
-  height: 100vh;
+  min-height: 100vh;
 
   margin: 0;
 
@@ -95,7 +95,8 @@ svg {
 .weather__condition {
   margin-top: 0;
 
-  font-size: 3.25rem;
+  /* font-size: 3rem; */
+  font-size: calc(100% + 3vw);
   font-weight: 300;
 
   letter-spacing: 0.5px;
@@ -115,6 +116,10 @@ svg {
 }
 
 /* Right Panel */
+
+.weather__right {
+  text-align: center;
+}
 
 .weather__misc {
   display: flex;
@@ -262,5 +267,39 @@ svg {
   }
   100% {
     transform: rotateZ(360deg);
+  }
+}
+
+/* RWD */
+
+@media screen and (max-width: 750px) {
+  #weather {
+    grid-template-columns: 1fr 1fr;
+    row-gap: 2em;
+  }
+
+  .weather__header__city {
+    font-size: calc(100% + 3vw);
+  }
+
+  .weather__wind__speed {
+    font-size: 1.3rem;
+  }
+
+  .weather__wind__direction {
+    font-size: 1rem;
+  }
+
+  .weather__rain__item,
+  .weather__misc__clouds,
+  .weather__misc__pressure,
+  .weather__misc__humidity,
+  .weather__misc__sunrise,
+  .weather__misc__sunset {
+    font-size: 1.2rem;
+  }
+
+  .weather__center {
+    grid-row: span 2;
   }
 }
