@@ -2,10 +2,12 @@ import "./style.css";
 import axios from "axios";
 import Weather from "./weather";
 import Forecast from "./forecast";
+import Spinner from "./spinner";
 const form = document.querySelector("#searchCityForm");
 
 const weather = new Weather();
 const forecast = new Forecast();
+const spinner = new Spinner();
 
 const publicApiKey = "ed6024d82facfcd9aea93f3226a43f09";
 // const cityName = "Tychy";
@@ -32,17 +34,20 @@ const initializeApp = () => {
 
   getWeatherDataByCity(defaultCity)
     .then((data) => {
-      console.log(data);
+      // console.log(data);
       weather.setWeatherData(data);
       weather.render();
 
       forecast.setForecastData(data.forecast.list);
       forecast.render();
+
+      spinner.hide();
     })
     .catch((err) => console.log(err));
 
   form.addEventListener("submit", (e) => {
     const city = e.target.city.value;
+    spinner.show();
 
     getWeatherDataByCity(city)
       .then((data) => {
@@ -52,6 +57,8 @@ const initializeApp = () => {
 
         forecast.setForecastData(data.forecast.list);
         forecast.render();
+
+        spinner.hide();
       })
       .catch((err) => console.log(err));
 

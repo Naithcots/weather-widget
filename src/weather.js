@@ -89,10 +89,10 @@ class Weather {
   };
   setRightPanelTemplate = () => {
     const sunrise = new Date(
-      this.data.forecast.city.sunrise
+      this.data.forecast.city.sunrise * 1000
     ).toLocaleTimeString();
     const sunset = new Date(
-      this.data.forecast.city.sunset
+      this.data.forecast.city.sunset * 1000
     ).toLocaleTimeString();
 
     const html = `
