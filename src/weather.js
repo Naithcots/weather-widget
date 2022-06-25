@@ -1,5 +1,5 @@
 import { getWindLabel } from "./helperFunctions";
-const weather = document.querySelector("#weather");
+const weatherDOM = document.querySelector("#weather");
 
 class Weather {
   data = null;
@@ -10,10 +10,10 @@ class Weather {
   setWeatherData = (newWeatherData) => (this.data = newWeatherData);
 
   render = () => {
-    weather.innerHTML = "";
-    weather.appendChild(this.createLeftPanel());
-    weather.appendChild(this.createCenterPanel());
-    weather.appendChild(this.createRightPanel());
+    weatherDOM.innerHTML = "";
+    weatherDOM.appendChild(this.createLeftPanel());
+    weatherDOM.appendChild(this.createCenterPanel());
+    weatherDOM.appendChild(this.createRightPanel());
   };
 
   createLeftPanel = () => {
@@ -120,4 +120,6 @@ class Weather {
   };
 }
 
-export default Weather;
+const weather = new Weather();
+
+export default weather;

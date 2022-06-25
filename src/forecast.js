@@ -1,16 +1,16 @@
 import { getWindLabel } from "./helperFunctions";
 
-const forecast = document.querySelector("#forecast");
+const forecastDOM = document.querySelector("#forecast");
 
 class Forecast {
   setForecastData = (newForecastData) => (this.data = newForecastData);
 
   render = () => {
-    forecast.innerHTML = "";
+    forecastDOM.innerHTML = "";
 
     this.data.forEach((snap) => {
       const element = this.createForecastBox(snap);
-      forecast.appendChild(element);
+      forecastDOM.appendChild(element);
     });
   };
 
@@ -42,4 +42,6 @@ class Forecast {
   };
 }
 
-export default Forecast;
+const forecast = new Forecast();
+
+export default forecast;

@@ -1,20 +1,22 @@
-const spinner = document.querySelector(".spinner");
+const spinnerDOM = document.querySelector(".spinner");
 
 class Spinner {
   show() {
-    spinner.style.display = null;
-    spinner.classList.remove("hidden");
+    spinnerDOM.style.display = null;
+    spinnerDOM.classList.remove("hidden");
   }
   hide() {
-    spinner.classList.add("hidden");
-    spinner.addEventListener(
+    spinnerDOM.classList.add("hidden");
+    spinnerDOM.addEventListener(
       "transitionend",
       () => {
-        spinner.style.display = "none";
+        spinnerDOM.style.display = "none";
       },
       { once: true }
     );
   }
 }
 
-export default Spinner;
+const spinner = new Spinner();
+
+export default spinner;

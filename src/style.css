@@ -203,6 +203,11 @@ svg {
   background-color: transparent;
 }
 
+.form__input.error {
+  box-shadow: 0px 0px 2px 2px rgb(255, 28, 28);
+  outline: none;
+}
+
 .form__label {
   color: #777;
 
